@@ -16,7 +16,8 @@ class Esatapay {
       uri: `${this._endpoint}/account`,
       body: {
         api_key: this.Api_Key,
-        action: 'akun'
+        action: 'akun',
+        sign: crypto.createHash('md5').update(`HADIDEV${this.Api_Key}`).digest('hex')
       },
       json: true
     };
@@ -36,7 +37,8 @@ class Esatapay {
       uri: `${this._endpoint}/social-media`,
       body: {
         api_key: this.Api_Key,
-        action: 'layanan'
+        action: 'layanan',
+        sign: crypto.createHash('md5').update(`HADIDEV${this.Api_Key}`).digest('hex')
       },
       json: true
     };
