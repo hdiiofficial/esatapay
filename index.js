@@ -26,7 +26,27 @@ class Esatapay {
         return resp.data;
       })
       .catch(function (err) {
-        return err;
+        return err.data;
+      });
+      }
+  
+  Sosmed() {
+    const options = {
+      method: 'POST',
+      uri: `${this._endpoint}/social-media`,
+      body: {
+        api_key: this.Api_Key,
+        action: 'layanan'
+      },
+      json: true
+    };
+
+    return rp(options)
+      .then(function (resp) {
+        return resp.data;
+      })
+      .catch(function (err) {
+        return err.data;
       });
       }
 
