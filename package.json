@@ -1,6 +1,6 @@
 {
   "name": "esatapay",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "E-SATA client library for NodeJS",
   "main": "index.js",
   "repository": {
